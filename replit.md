@@ -1,6 +1,6 @@
-# [Project name]
+# Mark LIV Mobile
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Asistente móvil inspirado en Mark LIV para Android, con chat, lectura en voz alta, memoria local, recordatorios y acciones rápidas.
 
 ## Run & Operate
 
@@ -22,15 +22,20 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/mark-liv-mobile/app/(tabs)/index.tsx` — pantalla principal del asistente
+- `artifacts/mark-liv-mobile/context/AssistantContext.tsx` — estado persistente local
+- `artifacts/mark-liv-mobile/lib/assistant.ts` — parser de comandos móviles
+- `artifacts/mark-liv-mobile/constants/colors.ts` — tokens visuales holográficos
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- La primera versión es local-first: el chat, la memoria y los recordatorios se guardan con AsyncStorage para funcionar sin servidor.
+- La salida de voz usa `expo-speech`; la entrada de voz aprovecha el dictado del teclado Samsung para mantener compatibilidad con Expo Go.
+- Los comandos móviles se interpretan explícitamente para evitar prometer controles de escritorio que Android no puede ejecutar de forma directa.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Mark LIV Mobile ofrece una interfaz de asistente de voz/chat con avatar holográfico, respuestas en español, lectura en voz alta, comandos rápidos para YouTube y búsquedas, recordatorios, memoria personal, actividad y configuración del perfil.
 
 ## User preferences
 

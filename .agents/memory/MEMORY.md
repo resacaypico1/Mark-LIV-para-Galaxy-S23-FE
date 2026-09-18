@@ -1,0 +1,1 @@
+- [Mobile voice boundary](mobile-voice-boundary.md) — Android input uses Samsung keyboard dictation in Expo Go; native speech recognition needs a custom build.
